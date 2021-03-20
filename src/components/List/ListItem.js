@@ -1,24 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import Colors from '../../constants/Colors';
 
 const ListItem = (props) => {
   return (
-    <TouchableOpacity>
-      <View style={styles.screen}>
-        <View style={styles.container}>
-          <View style={styles.icon_place}>
-            <View style={styles.icon}>
-              <MaterialIcons name={props.iconname} size={24} color="white" />
-            </View>
-            <Text style={styles.text}>{props.adress}</Text>
+    <View style={styles.screen}>
+      <View style={styles.container}>
+        <View style={styles.icon_place}>
+          <View style={styles.icon}>
+            <MaterialIcons name={props.iconname} size={24} color="white" />
           </View>
-          <Text style={styles.textContent}>{props.text}</Text>
+          <Text style={styles.text}>{props.adress}</Text>
         </View>
+        <Text style={styles.textContent}>{props.text}</Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 

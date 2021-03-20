@@ -2,17 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import { Searchbar } from 'react-native-paper';
-import SafeArea from '../components/SafeArea';
+import SafeArea from '../components/UI/SafeArea';
 import ListView from '../components/List/ListView';
 
-const ListScreen = () => {
+const ListScreen = (props) => {
   return (
     <SafeArea>
       <View style={styles.search}>
         <Searchbar placeholder="SEARCH" />
       </View>
       <View style={styles.list}>
-        <ListView />
+        <ListView navigation={props.navigation} />
       </View>
     </SafeArea>
   );

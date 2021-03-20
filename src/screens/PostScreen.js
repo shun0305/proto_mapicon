@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import firebase from 'firebase';
-import db from '../../firebase';
+import { db } from '../../firebase';
 import * as Location from 'expo-location';
 import Geocoder from 'react-native-geocoding';
 
-import SafeArea from '../components/SafeArea';
+import SafeArea from '../components/UI/SafeArea';
 import CategoryModal from '../components/Post/CategoryModal';
 import PostView from '../components/Post/PostView';
 import Geolocation from '../components/Post/Geolocation';

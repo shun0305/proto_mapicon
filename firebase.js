@@ -37,6 +37,35 @@ const firebaseConfig = {
 
 const firebaseApp = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
-const db = firebaseApp.firestore().collection('post');
+export const db = firebaseApp.firestore().collection('post');
 
-export default db;
+// export default db;
+
+export default firebase;
+//ユーザ登録;
+// export const signup = (email, password) => {
+//   firebase
+//     .auth()
+//     .createUserWithEmailAndPassword(email, password)
+//     .then((user) => {
+//       if (user) {
+//         console.log('Success to Signup');
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
+
+// メール＆パスワードログイン
+// export const login = (email, password) => {
+//   firebase
+//     .auth()
+//     .signInWithEmailAndPassword(email, password)
+//     .then((response) => {
+//       alert('Login Success!');
+//     })
+//     .catch((error) => {
+//       alert(error.message);
+//     });
+// };
